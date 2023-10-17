@@ -1,0 +1,10 @@
+@use "../../styles/mixins";
+
+.wrapper {
+  @include flex-group(12px);
+  align-items: center;
+}
+
+.button {
+  background-color: red;
+}
