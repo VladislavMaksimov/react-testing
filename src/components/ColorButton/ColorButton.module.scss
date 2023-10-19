@@ -1,7 +1,7 @@
 @use "../../styles/mixins";
 
 .wrapper {
-  @include flex-group(12px);
+  @include mixins.flex-group(12px);
   align-items: center;
 }
 
