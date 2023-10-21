@@ -11,7 +11,7 @@ describe("spaces before camel-case capital letters", () => {
 
   test("works for multiple inner capital letters", () => {
     expect(replaceCamelCaseWithSpaces("MediumVioletRed")).toBe(
-      "Medium Violet Red"
+      "Medium Violet Red",
     );
   });
 });
