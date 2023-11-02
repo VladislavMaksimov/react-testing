@@ -1,12 +1,22 @@
 import { useState } from "react";
-import { Button, Form, NavLink } from "react-bootstrap";
+import { Button, Form, OverlayTrigger, Popover } from "react-bootstrap";
+import styles from "./SummaryForm.module.scss";
 
 export const SummaryForm = () => {
   const [accepted, setAccepted] = useState(false);
 
+  const popover = (
+    <Popover>
+      <Popover.Body>No ice cream will actually be delivered</Popover.Body>
+    </Popover>
+  );
+
   const termsAndConditionsLabel = (
     <span>
-      I agree to <NavLink href="#">Terms and conditions</NavLink>
+      I agree to
+      <OverlayTrigger placement="right" overlay={popover}>
+        <span className={styles.termsAndConditions}>Terms and conditions</span>
+      </OverlayTrigger>
     </span>
   );
 
