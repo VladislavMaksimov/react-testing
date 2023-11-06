@@ -1,10 +1,10 @@
 import "./App.css";
-import { ColorButton } from "./components/ColorButton/ColorButton";
+import { Options } from "./pages/Options/Options";
 
 function App() {
   return (
     <div className="App">
-      <ColorButton />
+      <Options optionType="scoops" />
     </div>
   );
 }
