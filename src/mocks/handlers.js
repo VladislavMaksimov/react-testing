@@ -1,18 +1,4 @@
-import { rest } from "msw";
+import { handleScoops } from "./handlers/scoops";
+import { handleToppings } from "./handlers/toppings";
 
-export const handlers = [
-  rest.get(`${process.env.REACT_APP_BASE}/scoops`, (req, res, ctx) => {
-    return res(
-      ctx.json([
-        {
-          name: "Chocolate",
-          imagePath: "/images/chocolate.png",
-        },
-        {
-          name: "Vanilla",
-          imagePath: "/images/vanilla.png",
-        },
-      ])
-    );
-  }),
-];
+export const handlers = [handleScoops(), handleToppings()];
